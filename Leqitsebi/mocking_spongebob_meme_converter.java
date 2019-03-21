@@ -6,7 +6,8 @@ public class mocking_spongebob_meme_converter {
         System.out.println(converter("Stefan ist gut in SEW!"));
     }
     public static String converter(String sentence){
-        String output="";
+        sentence = sentence.toLowerCase();
+        StringBuilder output= new StringBuilder();
         int rnd;
         for (int i = 0; i < sentence.length(); i++) {
             rnd = (int)(Math.random() * 17);
@@ -14,8 +15,8 @@ public class mocking_spongebob_meme_converter {
             if(rnd%2==0){
                 c=c.toUpperCase();
             }
-            output += c;
+            output.append(c);
         }
-        return output;
+        return output.toString();
     }
 }
